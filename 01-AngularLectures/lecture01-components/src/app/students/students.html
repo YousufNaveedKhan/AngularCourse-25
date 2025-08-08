@@ -1,0 +1,10 @@
+<h2>Student Details</h2>
+<!-- Data Binding -->
+<p>Name: {{ studentName }}</p>
+<p>Age: {{ studentAge }}</p>
+<p>Status: {{ isActive ? 'Active' : 'Inactive' }}</p>
+ 
+<p *ngIf="studentAge >= 18">Eligible for Registration</p>
+<p *ngIf="studentAge < 18"> Not Eligible</p>
+
+<li *ngFor="let student of students">{{ student }}</li>

@@ -1,0 +1,22 @@
+<h2>Student Details</h2>
+<p>Student Name: {{ studentName }}</p>
+<p>Student Age: {{ studentAge }}</p>
+<p>Status: {{ isActive ? 'Active' : 'Inactive' }}</p>
+
+<p *ngIf="studentAge >= 18">Eligible for Registration</p>
+<p *ngIf="studentAge < 18">Not Eligible for Registration</p>
+
+<ul>
+    <li *ngFor="let name of studentsList">{{ name }}</li>
+
+</ul>
+
+<button (click)="showMessage()">Click Me</button> <br><br>
+
+<input type="text" [(ngModel)]="studentName" placeholder="Enter Student Name">
+<input type="number" [(ngModel)]="studentAge" placeholder="Enter Student Age">
+
+<select [(ngModel)]="isActive">
+    <option [ngValue]="true">Active</option>
+    <option [ngValue]="false">Inactive</option>
+</select>
